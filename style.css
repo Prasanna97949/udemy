@@ -58,6 +58,9 @@ padding: 20px;
 right: 0;
 display: none;
 }
+.navbar__s4{
+    display: none;
+}
 .categories{
     display: flex;
     justify-content: space-around;
@@ -94,6 +97,9 @@ display: none;
 }
 .course-card{
     width: 200px;
+    flex-basis: 20%;
+    flex-grow: 1;
+    margin: 10px;
 }
 .course-card img{
     width: 100%;
@@ -152,8 +158,8 @@ display: none;
     background-color: white;
     border: solid black 2px;
     position: absolute;
-    top: 100px;
-    left: 100px;
+    top: 10%;
+    left: 10%;
     animation-name: zoom;
     animation-duration: 2s;
     opacity: 0;
@@ -172,4 +178,30 @@ display: none;
 }
 .saleimage{
     position: relative;
+}
+/* Media Query */
+@media screen and (max-width:800px) {
+    body{
+        font-size: 10px;
+    }
+}
+@media screen and (max-width:500px) {
+    .course-card{
+        flex-basis: 40%;
+    }
+    .Popular__container .course-card{
+        flex-basis: 40%;
+    }
+    .categories{
+        font-size: 7px;
+    }
+    .navbar__s2, .navbar__s3{
+        display: none;
+    }
+    .navbar__s4{
+        display: block;
+    }
+    .saleimage__offer{
+        width: 200px;
+    }
 }
